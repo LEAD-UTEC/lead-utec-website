@@ -19,11 +19,11 @@ export function Card({ variant = 'default', children, className }: CardProps) {
   if (variant === 'gradient-border') {
     return (
       <div className={cn('relative', className)}>
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-[#df3124] to-[#921ea2] p-[2px]">
-          <div className={cn(baseStyles, 'bg-[#010b3d] h-full rounded-xl')}>
-            {children}
-          </div>
+        {/* Borde de gradiente (solo visual, sin contenido) */}
+        <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-b from-[#df3124] to-[#921ea2] p-[2px]">
+          <div className="w-full h-full bg-[#010b3d] rounded-xl" />
         </div>
+        {/* Contenido (UNA SOLA VEZ) */}
         <div className={cn(baseStyles, 'relative')}>
           {children}
         </div>
