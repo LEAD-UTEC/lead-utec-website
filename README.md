@@ -10,6 +10,15 @@ This design system showcases LEAD UTEC's visual identity with:
 - **Modern Components**: Buttons, Cards, Inputs, Badges, and decorative elements
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
 
+## 🌿 Branches
+
+This project uses a two-branch workflow:
+
+- **`main`**: Production branch (live at https://lead-utec-website.vercel.app)
+- **`dev`**: Development branch (for active development)
+
+See [WORKFLOW.md](./WORKFLOW.md) for detailed Git workflow guidelines.
+
 ## 🚀 Getting Started
 
 ### Prerequisites
