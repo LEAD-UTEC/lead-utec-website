@@ -1,36 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LEAD UTEC Design System
 
-## Getting Started
+A comprehensive design system built for the LEAD UTEC organization, featuring a signature gradient palette and modern UI components.
 
-First, run the development server:
+## 🎨 Overview
+
+This design system showcases LEAD UTEC's visual identity with:
+- **Brand Colors**: Primary (#DF3124), Secondary (#921EA2), Accent (#C72A49)
+- **Signature Gradient**: Linear gradient from red to purple
+- **Modern Components**: Buttons, Cards, Inputs, Badges, and decorative elements
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ (tested with v22.14.0)
+- npm
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the design system.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Button
+4 variants (primary, secondary, outline, gradient) × 3 sizes (sm, md, lg)
 
-## Learn More
+```tsx
+import { Button } from '@/components/Button';
 
-To learn more about Next.js, take a look at the following resources:
+<Button variant="gradient" size="lg">Click me</Button>
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Card
+3 variants (default, gradient-border, gradient-bg)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```tsx
+import { Card } from '@/components/Card';
 
-## Deploy on Vercel
+<Card variant="gradient-border">
+  <h3>Card Title</h3>
+  <p>Card content</p>
+</Card>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Input
+Form input with label and error state
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```tsx
+import { Input } from '@/components/Input';
+
+<Input 
+  label="Email" 
+  type="email" 
+  placeholder="your@email.com"
+  error="This field is required"
+/>
+```
+
+### Badge
+Status indicators (primary, secondary, gradient)
+
+```tsx
+import { Badge } from '@/components/Badge';
+
+<Badge variant="gradient">v1.0</Badge>
+```
+
+### DecorativeAsterisk
+LEAD UTEC's signature asterisk icon with gradient
+
+```tsx
+import { DecorativeAsterisk } from '@/components/DecorativeAsterisk';
+
+<DecorativeAsterisk size={80} />
+```
+
+### GradientText
+Text with LEAD UTEC gradient
+
+```tsx
+import { GradientText } from '@/components/GradientText';
+
+<GradientText>LEAD UTEC</GradientText>
+```
+
+## 🎨 Color Palette
+
+```css
+--color-primary: #df3124;
+--color-secondary: #921ea2;
+--color-accent: #c72a49;
+--color-background: #010b3d;
+--color-white: #ffffff;
+```
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Icons**: Lucide React
+- **Utilities**: clsx
+
+## 📁 Project Structure
+
+```
+lead-utec-website/
+├── app/
+│   ├── layout.tsx         # Root layout with metadata
+│   ├── page.tsx           # Main design system showcase
+│   └── globals.css        # Global styles and CSS variables
+├── components/
+│   ├── Badge.tsx
+│   ├── Button.tsx
+│   ├── Card.tsx
+│   ├── DecorativeAsterisk.tsx
+│   ├── GradientText.tsx
+│   └── Input.tsx
+├── lib/
+│   └── utils.ts           # Utility functions (cn)
+└── public/
+    └── images/            # Static assets
+```
+
+## 🌐 Deployment
+
+This project is ready to be deployed on Vercel, Netlify, or any platform supporting Next.js.
+
+### Deploy to Vercel
+
+```bash
+npm i -g vercel
+vercel
+```
+
+## 📝 License
+
+© 2026 LEAD UTEC. All rights reserved.
+
+---
+
+**Built with** ❤️ **by the LEAD UTEC team**
