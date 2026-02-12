@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { DecorativeAsterisk } from './DecorativeAsterisk';
+import Image from 'next/image';
 
 const footerLinks = {
   about: [
@@ -29,7 +29,13 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <DecorativeAsterisk size={36} />
+              <Image
+                src="/images/leaduteclogo.png"
+                alt="LEAD UTEC"
+                width={36}
+                height={36}
+                className="rounded"
+              />
               <span className="text-xl font-bold text-white">LEAD UTEC</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-sm">
