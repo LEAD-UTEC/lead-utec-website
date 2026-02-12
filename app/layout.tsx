@@ -13,8 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LEAD UTEC Design System",
-  description: "A comprehensive design system built for the LEAD UTEC organization, featuring our signature gradient and modern components.",
+  title: "LEAD UTEC - Building Latin America's Tech Leaders",
+  description:
+    "LEAD UTEC - Building Latin America's tech leaders. Official student organization at UTEC Peru developing leadership and impact through real projects.",
+  keywords: [
+    "LEAD UTEC",
+    "UTEC student organization",
+    "tech leadership Peru",
+    "Latin America tech",
+    "student projects",
+    "STEM leadership",
+  ],
+  openGraph: {
+    title: "LEAD UTEC - Building Latin America's Tech Leaders",
+    description:
+      "Official student organization at UTEC Peru developing leadership and impact through real projects.",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
