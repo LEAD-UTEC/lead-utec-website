@@ -103,7 +103,7 @@ const teamMembers = [
   { name: 'Diego Miranda', role: 'Head of Operations' },
   { name: 'Nayeli Guerrero', role: 'Head of Marketing' },
   { name: 'Adriana Alvarado', role: 'Head of Product' },
-  { name: 'Nicole Yucra', role: 'Team Member' },
+  { name: 'Nicole Yucra', role: 'Head of Talent' },
   { name: 'Luciana Melgarejo', role: 'Team Member' },
   { name: 'Alanis Espinoza', role: 'Team Member' },
   { name: 'Osmar Vilchez', role: 'Team Member' },
