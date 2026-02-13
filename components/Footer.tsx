@@ -32,7 +32,7 @@ export function Footer() {
               <Image
                 src="/images/leaduteclogo.png"
                 alt="LEAD UTEC"
-                width={36}
+                width={50}
                 height={36}
                 className="rounded"
               />
