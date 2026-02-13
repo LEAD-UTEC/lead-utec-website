@@ -98,22 +98,22 @@ const projects = [
 ];
 
 const teamMembers = [
-  { name: 'Luis Maquera', role: 'President' },
-  { name: 'Christian Estrada', role: 'Vice-President' },
-  { name: 'Diego Miranda', role: 'Head of Operations' },
-  { name: 'Nayeli Guerrero', role: 'Head of Marketing' },
-  { name: 'Adriana Alvarado', role: 'Head of Product' },
-  { name: 'Nicole Yucra', role: 'Head of Talent' },
-  { name: 'Luciana Melgarejo', role: 'Team Member' },
-  { name: 'Alanis Espinoza', role: 'Team Member' },
-  { name: 'Osmar Vilchez', role: 'Team Member' },
-  { name: 'Ronaldo Diaz', role: 'Team Member' },
-  { name: 'Stefano Alvarado', role: 'Team Member' },
-  { name: 'Eurymar Umbria', role: 'Team Member' },
-  { name: 'Geremid Flores', role: 'Team Member' },
-  { name: 'Axel Ylachoque', role: 'Team Member' },
-  { name: 'William Yalico', role: 'Team Member' },
-  { name: 'Celeste Caballero', role: 'Team Member' },
+  { name: 'Luis Maquera', role: 'President', imageUrl: 'images/members/luis-m.png' },
+  { name: 'Christian Estrada', role: 'Vice-President', imageUrl: 'images/members/christian-e.png' },
+  { name: 'Diego Miranda', role: 'Head of Operations', imageUrl: 'images/members/diego-m.png' },
+  { name: 'Nayeli Guerrero', role: 'Head of Marketing', imageUrl: 'images/members/nayeli-g.png' },
+  { name: 'Adriana Alvarado', role: 'Head of Product', imageUrl: 'images/members/adriana-a.png' },
+  { name: 'Nicole Yucra', role: 'Head of Talent', imageUrl: 'images/members/nicole-y.png' },
+  { name: 'Luciana Melgarejo', role: 'Team Member', imageUrl: 'images/members/luciana-m.png' },
+  { name: 'Alanis Espinoza', role: 'Team Member', imageUrl: 'images/members/alanis-e.png' },
+  { name: 'Osmar Vilchez', role: 'Team Member', imageUrl: 'images/members/osmar-v.png' },
+  { name: 'Ronaldo Diaz', role: 'Team Member', imageUrl: 'images/members/ronaldo-d.png' },
+  { name: 'Stefano Alvarado', role: 'Team Member', imageUrl: 'images/members/stefano-a.png' },
+  { name: 'Eurymar Umbria', role: 'Team Member', imageUrl: 'images/members/eurymar-u.png' },
+  { name: 'Geremid Flores', role: 'Team Member', imageUrl: 'images/members/geremid-f.png' },
+  { name: 'Axel Ylachoque', role: 'Team Member', imageUrl: 'images/members/axel-y.png' },
+  { name: 'William Yalico', role: 'Team Member', imageUrl: 'images/members/william-y.png' },
+  { name: 'Celeste Caballero', role: 'Team Member', imageUrl: 'images/members/celeste-c.png' },
 ];
 
 const metrics = [

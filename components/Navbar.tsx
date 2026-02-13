@@ -41,9 +41,8 @@ export function Navbar() {
             <Image
               src="/images/leaduteclogo.png"
               alt="LEAD UTEC"
-              width={40}
+              width={50}
               height={40}
-              className="rounded-lg"
             />
             <span className="text-xl font-bold text-white group-hover:text-white/90 transition-colors">
               LEAD UTEC
