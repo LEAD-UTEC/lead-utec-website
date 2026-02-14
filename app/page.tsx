@@ -12,25 +12,44 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { TeamMemberCard } from '@/components/TeamMemberCard';
 import { MetricsDisplay } from '@/components/MetricsDisplay';
 import { Section, SectionHeader } from '@/components/Section';
-import {
-  Heart,
-  Users,
-  Zap,
-  Target,
-  ArrowRight,
-  ExternalLink,
-} from 'lucide-react';
+import { Heart, Users, Zap, Target, ArrowRight, ExternalLink } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 /* ───────────────────────────── DATA ───────────────────────────── */
 
 const projects = [
+  // LARGE CARDS (2x2) - Priority: Hero cards with background images
+  {
+    title: 'Data Leaders 2',
+    type: 'Event',
+    date: 'December 13, 2025',
+    axis: 'Professional Dev',
+    description:
+      'Second edition bringing together data professionals to guide, inspire, and connect students interested in Data Science careers.',
+    imageUrl: '/images/projects/dataLeaders2.webp',
+    size: 'large' as const,
+  },
+  {
+    title: 'LEAD UTEC Update',
+    type: 'Event',
+    date: 'September 12, 2025',
+    axis: 'Leadership',
+    description:
+      'Community gathering marking the start of a new semester, featuring a fireside chat with Microsoft Peru\'s General Manager, Lead Tank presentations from each pillar, and networking activities to strengthen connections.',
+    imageUrl: '/images/projects/leadUpdate.webp',
+    size: 'large' as const,
+  },
   {
     title: 'STEM in Aula 1.0',
     type: 'Program',
     axis: 'LEAD Academia',
     description:
       'Two-session educational program bringing technology and computer science to high school students in Lima and beyond, reducing the digital divide through hands-on workshops.',
+    imageUrl: '/images/projects/StemInAula.webp',
+    size: 'large' as const,
   },
+  
+  // SMALL CARDS (1x1) - Remaining projects
   {
     title: 'Introduction to Competitive Programming Course',
     type: 'Program',
@@ -38,14 +57,8 @@ const projects = [
     axis: 'Academic Excellence',
     description:
       'Intensive technical course developing competitive programming skills through structured training and practice.',
-  },
-  {
-    title: 'Competitive Programming Panel',
-    type: 'Conference',
-    date: 'May 10, 2025',
-    axis: 'Academic Excellence',
-    description:
-      'Panel discussion with competitive programming experts sharing strategies, experiences, and career pathways.',
+    imageUrl: '/images/projects/CursoPrograCompetitiva_1.webp',
+    size: 'small' as const,
   },
   {
     title: 'Data Leaders',
@@ -54,14 +67,8 @@ const projects = [
     axis: 'Professional Dev',
     description:
       'Professional event connecting students with data and analytics leaders, exploring career opportunities in data science.',
-  },
-  {
-    title: 'Data Leaders 2',
-    type: 'Event',
-    date: 'December 13, 2025',
-    axis: 'Professional Dev',
-    description:
-      'Second edition bringing together data professionals to guide, inspire, and connect students interested in Data Science careers.',
+    imageUrl: '/images/projects/dataLeaders1.webp',
+    size: 'small' as const,
   },
   {
     title: 'GirlTech Coffee Talks',
@@ -70,6 +77,8 @@ const projects = [
     axis: "Women's Excellence",
     description:
       'Conversational space creating role models for women in tech, providing a safe environment to explore career paths in STEM.',
+    imageUrl: '/images/projects/girlTechCoffeeTalks.webp',
+    size: 'small' as const,
   },
   {
     title: 'TecHer Coffee Talks',
@@ -78,6 +87,22 @@ const projects = [
     axis: "Women's Excellence",
     description:
       'Intimate networking event featuring a prominent woman in tech sharing her journey, fostering dialogue and mentorship.',
+    imageUrl: '/images/projects/TecHer-Coffee-Talks.webp',
+    size: 'small' as const,
+  },
+];
+
+// Hidden projects - kept for future dedicated projects page
+const hiddenProjects = [
+  {
+    title: 'Competitive Programming Panel',
+    type: 'Conference',
+    date: 'May 10, 2025',
+    axis: 'Academic Excellence',
+    description:
+      'Panel discussion with competitive programming experts sharing strategies, experiences, and career pathways.',
+    imageUrl: '/images/projects/ConversatorioPrograCompetitiva_1.webp',
+    size: 'small' as const,
   },
   {
     title: 'LEAD Welcome',
@@ -86,14 +111,8 @@ const projects = [
     axis: 'Leadership',
     description:
       "Welcome event introducing prospective and new members to LEAD UTEC's culture, values, and development opportunities.",
-  },
-  {
-    title: 'LEAD UTEC Update',
-    type: 'Event',
-    date: 'September 12, 2025',
-    axis: 'Leadership',
-    description:
-      'Internal organizational update event for LEAD Team members, reinforcing culture and strategic direction.',
+    imageUrl: '/images/leaduteclogo.png',
+    size: 'small' as const,
   },
 ];
 
@@ -117,11 +136,10 @@ const teamMembers = [
 ];
 
 const metrics = [
-  { value: '9', label: 'Projects Completed', suffix: '' },
-  { value: '16', label: 'Active Team Members', suffix: '' },
+  { value: '10', label: 'Projects Completed', suffix: '' },
+  { value: '1000', label: 'Students Impacted', suffix: '+' },
   { value: '1600', label: 'Community Reach', suffix: '+' },
-  { value: '6', label: 'Thematic Axes', suffix: '' },
-  { value: '5', label: 'Departments', suffix: '' },
+  { value: '16', label: 'Active Team Members', suffix: '' },
 ];
 
 const faqItems = [
@@ -166,10 +184,10 @@ const faqItems = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#010b3d] text-white">
+    <div className="flex flex-col min-h-screen bg-[#010b3d] text-white">
       <Navbar />
 
-      {/* ═══════════════════ 1. HERO SECTION ═══════════════════ */}
+      <main className="flex-1">{/* ═══════════════════ 1. HERO SECTION ═══════════════════ */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         {/* Background Effects */}
         <div className="absolute inset-0 pointer-events-none">
@@ -193,9 +211,11 @@ export default function Home() {
                   Join the Community
                 </Button>
               </a>
-              <Button variant="outline" size="lg">
-                Join the Team <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </Button>
+              <a href="https://forms.gle/wk5WEpFEZPJB3rE4A" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg">
+                  Join the Team <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -290,12 +310,22 @@ export default function Home() {
           <MetricsDisplay metrics={metrics} />
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid - Bento Box Layout */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-8">Completed Projects (2025)</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
             {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
+              <ProjectCard 
+                key={project.title} 
+                {...project}
+                className={cn(
+                  // Base: all cards span 1 column on mobile
+                  "col-span-1",
+                  // Large cards: span 2 columns and 2 rows on tablet and desktop
+                  project.size === 'large' && "md:col-span-1 md:row-span-2 lg:col-span-2 lg:row-span-2",
+                  // Small cards: default 1x1 on all breakpoints
+                )}
+              />
             ))}
           </div>
         </div>
@@ -414,9 +444,11 @@ export default function Home() {
               <p className="text-white/90 text-sm leading-relaxed mb-6">
                 Ready to lead projects and create real impact? Apply to join the LEAD Team. We evaluate leadership potential, commitment, and alignment with our values.
               </p>
-              <Button variant="outline" size="md" className="border-white text-white hover:bg-white hover:text-[#df3124]">
-                Apply Now <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </Button>
+              <a href="https://forms.gle/wk5WEpFEZPJB3rE4A" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="md" className="border-white text-white hover:bg-white hover:text-[#df3124]">
+                  Apply Now <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </Button>
+              </a>
             </div>
           </Card>
         </div>
@@ -445,6 +477,8 @@ export default function Home() {
           </a>
         </div>
       </Section>
+
+      </main>
 
       {/* ═══════════════════ 9. FOOTER ═══════════════════ */}
       <Footer />
