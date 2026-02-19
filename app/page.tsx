@@ -325,9 +325,16 @@ export default function Home() {
           centered
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* UTEC */}
           <Card variant="gradient-border">
+            <div className="h-16 mb-4 flex items-center">
+              <img
+                src="/images/partners/utec-logo.png"
+                alt="UTEC Logo"
+                className="h-12 w-auto"
+              />
+            </div>
             <h3 className="text-xl font-bold mb-3">Universidad de Ingenieria y Tecnologia (UTEC)</h3>
             <p className="text-white/60 text-sm leading-relaxed mb-4">
               LEAD UTEC is an official student organization at UTEC, Peru&apos;s premier engineering and technology university. Founded in 2011, UTEC has quickly become one of Latin America&apos;s top engineering schools.
@@ -344,6 +351,13 @@ export default function Home() {
 
           {/* LEAD Global */}
           <Card variant="gradient-border">
+            <div className="h-16 mb-4 flex items-center">
+              <img
+                src="/images/partners/lead-global-logo.png"
+                alt="LEAD Global Logo"
+                className="h-12 w-auto"
+              />
+            </div>
             <h3 className="text-xl font-bold mb-3">LEAD Global Network</h3>
             <p className="text-white/60 text-sm leading-relaxed mb-4">
               LEAD UTEC is a student chapter of LEAD, a global network fostering tech leadership and professional development. Our members gain access to international opportunities, global mentorship networks, and a community of ambitious tech leaders.
@@ -355,6 +369,30 @@ export default function Home() {
               className="text-sm font-medium text-[#df3124] hover:text-[#c72a49] transition-colors inline-flex items-center gap-1"
             >
               Visit LEAD Global <ExternalLink className="w-4 h-4" />
+            </a>
+          </Card>
+
+          {/* DataCamp */}
+          <Card variant="gradient-border">
+            <div className="h-16 mb-4 flex items-center">
+              {/* Logo placeholder - replace src with actual DataCamp logo */}
+              <img
+                src="/images/partners/datacamp-logo.jpg"
+                alt="DataCamp Logo"
+                className="h-12 w-auto"
+              />
+            </div>
+            <h3 className="text-xl font-bold mb-3">DataCamp</h3>
+            <p className="text-white/60 text-sm leading-relaxed mb-4">
+              DataCamp is the go-to platform for learning data science and analytics. Through our partnership, LEAD UTEC members gain access to world-class courses in Python, R, SQL, and machine learning.
+            </p>
+            <a
+              href="https://www.datacamp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-[#df3124] hover:text-[#c72a49] transition-colors inline-flex items-center gap-1"
+            >
+              Visit DataCamp <ExternalLink className="w-4 h-4" />
             </a>
           </Card>
         </div>
