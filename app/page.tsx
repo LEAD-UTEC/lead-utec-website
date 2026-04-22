@@ -12,6 +12,7 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { TeamMemberCard } from '@/components/TeamMemberCard';
 import { MetricsDisplay } from '@/components/MetricsDisplay';
 import { Section, SectionHeader } from '@/components/Section';
+import { LeaderTest } from '@/components/LeaderTest';
 import {
   Heart,
   Users,
@@ -458,6 +459,16 @@ export default function Home() {
             </div>
           </Card>
         </div>
+      </Section>
+
+      {/* ═══════════════════ 7.5. LEADER TEST ═══════════════════ */}
+      <Section id="leader-test">
+        <SectionHeader
+          title="Descubre tu Estilo de Liderazgo"
+          subtitle="Antes de aplicar, descubre cómo lideras. Toma nuestro quiz corto para identificar tu arquetipo de liderazgo y las áreas de LEAD UTEC donde generarías más impacto."
+          centered
+        />
+        <LeaderTest />
       </Section>
 
       {/* ═══════════════════ 8. FAQ ═══════════════════ */}
