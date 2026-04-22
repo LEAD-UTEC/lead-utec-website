@@ -11,6 +11,7 @@ const navLinks = [
   { label: 'Impact', href: '#impact' },
   { label: 'Team', href: '#team' },
   { label: 'Partners', href: '#partners' },
+  { label: 'Test de Liderazgo', href: '#leader-test' },
   { label: 'FAQ', href: '#faq' },
 ];
 
